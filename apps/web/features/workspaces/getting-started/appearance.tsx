@@ -14,7 +14,7 @@ import { useStepperContext } from '@saas-ui/react'
 import { OnboardingStep } from './onboarding-step'
 import { appearanceSchema } from './schema/appearance.schema'
 
-// Define theme mode type to avoid repetition
+// Define theme mode type to avoid repetition...
 type ThemeMode = 'light' | 'dark'
 
 interface ThemeOptionProps extends Omit<StackProps, 'onSelect'> {
