@@ -2,10 +2,8 @@
 
 import * as React from 'react'
 
-import { ColorMode, localStorageManager } from '@chakra-ui/react'
 import { FeaturesProvider } from '@saas-ui-pro/feature-flags'
 import { SaasProvider } from '@saas-ui/react'
-import { getCookie, setCookie } from 'cookies-next'
 import { IconContext } from 'react-icons'
 
 import { segments } from '@acme/config'
@@ -21,12 +19,12 @@ import { Hotkeys } from '../components/hotkeys'
 
 export interface AppProviderProps {
   onError?: (error: Error, info: any) => void
-  initialColorMode?: ColorMode
+  initialColorMode?: 'light' | 'dark'
   children: React.ReactNode
 }
 
 export const AppProvider: React.FC<AppProviderProps> = (props) => {
-  const { onError, initialColorMode, children } = props
+  const { onError, children } = props
 
   return (
     <IconContext.Provider value={{ className: 'react-icon', size: '1.1em' }}>

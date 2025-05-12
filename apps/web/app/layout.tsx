@@ -7,8 +7,6 @@ import '@fontsource/lato/700.css'
 import '@fontsource/lato/900.css'
 
 import { Metadata } from 'next'
-import { cookies } from 'next/headers'
-
 import { UserSettings } from '#lib/user-settings/user-settings'
 
 import { Provider } from './provider'
