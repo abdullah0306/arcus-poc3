@@ -115,48 +115,48 @@ export const AppSidebar: React.FC<AppSidebarProps> = (props) => {
           <SidebarSection overflowY="auto" flex="1">
             <NavGroup>
               <AppSidebarLink
-                href={usePath('/:workspace')}
+                href={usePath('/')}
                 label="Dashboard"
                 icon={<LuLayoutGrid />}
                 hotkey="navigation.dashboard"
               />
               <AppSidebarLink
-                href={usePath('/:workspace/projects')}
+                href={usePath('/projects')}
                 isActive={useActivePath('projects', { end: false })}
                 label="Projects"
                 icon={<LuFolder />}
                 hotkey="navigation.projects"
               />
               <AppSidebarLink
-                href={usePath('/:workspace/takeoffs')}
+                href={usePath('/takeoffs')}
                 isActive={useActivePath('takeoffs', { end: false })}
                 label="Takeoffs"
                 icon={<LuRocket />}
                 hotkey="navigation.takeoffs"
               />
               <AppSidebarLink
-                href={usePath('/:workspace/products')}
+                href={usePath('/products')}
                 isActive={useActivePath('products', { end: false })}
                 label="Products"
                 icon={<LuPackage />}
                 hotkey="navigation.products"
               />
               <AppSidebarLink
-                href={usePath('/:workspace/clients')}
+                href={usePath('/clients')}
                 isActive={useActivePath('clients', { end: false })}
                 label="Clients"
                 icon={<LuUsers />}
                 hotkey="navigation.clients"
               />
               <AppSidebarLink
-                href={usePath('/:workspace/invoices')}
+                href={usePath('/invoices')}
                 isActive={useActivePath('invoices', { end: false })}
                 label="Invoices"
                 icon={<LuFileText />}
                 hotkey="navigation.invoices"
               />
               <AppSidebarLink
-                href={usePath('/:workspace/reports')}
+                href={usePath('/reports')}
                 isActive={useActivePath('reports', { end: false })}
                 label="Reports"
                 badge="Coming soon"
@@ -164,14 +164,14 @@ export const AppSidebar: React.FC<AppSidebarProps> = (props) => {
                 hotkey="navigation.reports"
               />
               <AppSidebarLink
-                href={usePath('/:workspace/calendar')}
+                href={usePath('/calendar')}
                 isActive={useActivePath('calendar', { end: false })}
                 label="Calendar"
                 icon={<LuCalendar />}
                 hotkey="navigation.calendar"
               />
               <AppSidebarLink
-                href={usePath('/:workspace/settings')}
+                href={usePath('/settings')}
                 isActive={useActivePath('settings', { end: false })}
                 label="Settings"
                 icon={<LuSettings />}
