@@ -70,6 +70,8 @@
     "node": ">=20.14.0"
   },
   "dependencies": {
-    "@fontsource/lato": "^5.1.1"
+    "@fontsource/lato": "^5.1.1",
+    "chart.js": "^4.4.9",
+    "react-chartjs-2": "^5.3.0"
   }
 }
