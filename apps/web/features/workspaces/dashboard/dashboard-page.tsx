@@ -17,10 +17,8 @@ import {
   PageBody,
   PageHeader,
   Toolbar,
-  ToolbarButton,
 } from '@saas-ui-pro/react'
 import { LoadingOverlay, LoadingSpinner } from '@saas-ui/react'
-import { FaDiscord, FaGithub, FaTwitter } from 'react-icons/fa'
 
 import {
   DateRange,
