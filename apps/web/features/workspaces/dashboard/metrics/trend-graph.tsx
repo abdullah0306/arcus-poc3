@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import { Line } from 'react-chartjs-2'
 import {
   Chart as ChartJS,
@@ -28,7 +28,7 @@ interface TrendGraphProps {
 }
 
 export const TrendGraph = ({ data, color, height = 80 }: TrendGraphProps) => {
-  const labels = Array.from({ length: data.length }, (_, i) => ``)
+  const labels = Array.from({ length: data.length }, () => ``)
 
   const chartData = {
     labels,
