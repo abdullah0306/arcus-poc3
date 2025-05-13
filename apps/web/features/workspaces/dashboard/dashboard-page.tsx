@@ -17,10 +17,8 @@ import {
   PageBody,
   PageHeader,
   Toolbar,
-  ToolbarButton,
 } from '@saas-ui-pro/react'
 import { LoadingOverlay, LoadingSpinner } from '@saas-ui/react'
-import { FaDiscord, FaGithub, FaTwitter } from 'react-icons/fa'
 
 import {
   DateRange,
@@ -81,32 +79,7 @@ export function DashboardPage(props: WorkspacePageProps) {
 
   const toolbar = (
     <Toolbar className="overview-toolbar" variant="ghost">
-      <ToolbarButton
-        as="a"
-        href="https://twitter.com/intent/tweet?text=Check%20out%20%40saas_js,%20an%20advanced%20component%20library%20for%20SaaS%20products%20build%20with%20%40chakra_ui.%20https%3A//saas-ui.dev%20"
-        icon={<FaTwitter />}
-        label="Share on Twitter"
-      />
-      <ToolbarButton
-        as="a"
-        href="https://github.com/saas-js/saas-ui"
-        icon={<FaGithub />}
-        label="Star on Github"
-      />
-      <ToolbarButton
-        as="a"
-        href="https://discord.gg/4PmJGFcAjX"
-        icon={<FaDiscord />}
-        label="Join Discord"
-      />
-      <ToolbarButton
-        as="a"
-        href="https://saas-ui.lemonsqueezy.com/checkout/buy/5c76854f-738a-46b8-b32d-932a97d477f5"
-        label="Buy Pro"
-        colorScheme="primary"
-        variant="solid"
-        className="pre-order"
-      />
+      {/* Empty toolbar - removed social media buttons */}
     </Toolbar>
   )
 
