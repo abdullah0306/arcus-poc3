@@ -9,6 +9,7 @@ import {
   Spacer,
   Stack,
   useBreakpointValue,
+  useToast,
 } from '@chakra-ui/react'
 import {
   Command,
@@ -64,6 +65,7 @@ export interface AppSidebarProps extends SidebarProps {}
 export const AppSidebar: React.FC<AppSidebarProps> = (props) => {
   const modals = useModals()
   const help = useHelpCenter()
+  const toast = useToast()
 
   const [{ sidebarWidth }, setUserSettings] = useUserSettings()
 
@@ -155,14 +157,28 @@ export const AppSidebar: React.FC<AppSidebarProps> = (props) => {
                 icon={<LuFileText />}
                 hotkey="navigation.invoices"
               />
-              <AppSidebarLink
-                href={usePath('/reports')}
-                isActive={useActivePath('reports', { end: false })}
-                label="Reports"
-                badge="Coming soon"
+              <NavItem
+                onClick={() => {
+                  toast({
+                    title: 'Coming Soon',
+                    description: 'Reports feature is not available right now',
+                    status: 'warning',
+                    duration: 3000,
+                    isClosable: true,
+                    position: 'top',
+                    variant: 'solid',
+                    colorScheme: 'brand'
+                  })
+                }}
                 icon={<LuFileHeart />}
-                hotkey="navigation.reports"
-              />
+                color="gray.500"
+                cursor="not-allowed"
+              >
+                Reports
+                <Badge borderRadius="sm" ms="auto" px="1.5" bg="none" color="gray.500">
+                  Coming soon
+                </Badge>
+              </NavItem>
               <AppSidebarLink
                 href={usePath('/calendar')}
                 isActive={useActivePath('calendar', { end: false })}
