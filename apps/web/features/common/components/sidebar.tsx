@@ -32,12 +32,17 @@ import { Route } from 'next'
 import { useRouter } from 'next/navigation'
 import {
   LuCircleHelp,
-  LuHouse,
-  LuInbox,
+  LuLayoutGrid,
+  LuFolder,
+  LuRocket,
+  LuPackage,
+  LuUsers,
+  LuFileText,
+  LuFileHeart,
+  LuCalendar,
+  LuSettings,
   LuPlus,
-  LuSearch,
-  LuSquareUser,
-  LuWallet,
+  LuSearch
 } from 'react-icons/lu'
 
 import { useActivePath } from '@acme/next'
@@ -110,32 +115,67 @@ export const AppSidebar: React.FC<AppSidebarProps> = (props) => {
           <SidebarSection overflowY="auto" flex="1">
             <NavGroup>
               <AppSidebarLink
-                href={usePath('/')}
+                href={usePath('/:workspace')}
                 label="Dashboard"
-                icon={<LuHouse />}
+                icon={<LuLayoutGrid />}
                 hotkey="navigation.dashboard"
               />
               <AppSidebarLink
-                href={usePath('inbox')}
-                isActive={useActivePath('inbox', { end: false })}
-                label="Inbox"
-                badge={2}
-                icon={<LuInbox />}
-                hotkey="navigation.inbox"
+                href={usePath('/:workspace/projects')}
+                isActive={useActivePath('projects', { end: false })}
+                label="Projects"
+                icon={<LuFolder />}
+                hotkey="navigation.projects"
               />
               <AppSidebarLink
-                href={usePath('contacts')}
-                isActive={useActivePath('contacts', { end: false })}
-                label="Contacts"
-                icon={<LuSquareUser />}
-                hotkey="navigation.contacts"
+                href={usePath('/:workspace/takeoffs')}
+                isActive={useActivePath('takeoffs', { end: false })}
+                label="Takeoffs"
+                icon={<LuRocket />}
+                hotkey="navigation.takeoffs"
               />
               <AppSidebarLink
-                href={usePath('bank-integrations')}
-                isActive={useActivePath('bank-integrations', { end: false })}
-                label="Bank Integrations"
-                icon={<LuWallet />}
-                hotkey="navigation.bankIntegrations"
+                href={usePath('/:workspace/products')}
+                isActive={useActivePath('products', { end: false })}
+                label="Products"
+                icon={<LuPackage />}
+                hotkey="navigation.products"
+              />
+              <AppSidebarLink
+                href={usePath('/:workspace/clients')}
+                isActive={useActivePath('clients', { end: false })}
+                label="Clients"
+                icon={<LuUsers />}
+                hotkey="navigation.clients"
+              />
+              <AppSidebarLink
+                href={usePath('/:workspace/invoices')}
+                isActive={useActivePath('invoices', { end: false })}
+                label="Invoices"
+                icon={<LuFileText />}
+                hotkey="navigation.invoices"
+              />
+              <AppSidebarLink
+                href={usePath('/:workspace/reports')}
+                isActive={useActivePath('reports', { end: false })}
+                label="Reports"
+                badge="Coming soon"
+                icon={<LuFileHeart />}
+                hotkey="navigation.reports"
+              />
+              <AppSidebarLink
+                href={usePath('/:workspace/calendar')}
+                isActive={useActivePath('calendar', { end: false })}
+                label="Calendar"
+                icon={<LuCalendar />}
+                hotkey="navigation.calendar"
+              />
+              <AppSidebarLink
+                href={usePath('/:workspace/settings')}
+                isActive={useActivePath('settings', { end: false })}
+                label="Settings"
+                icon={<LuSettings />}
+                hotkey="navigation.settings"
               />
             </NavGroup>
 
